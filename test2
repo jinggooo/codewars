@@ -1,0 +1,17 @@
+# return masked string
+def maskify(cc):
+    mystr = ""
+    letter = list(cc)
+    mylen = len(list(cc))
+    
+    if mylen < 5:    
+        return cc
+    else:
+        for x in range(mylen):
+            if mylen-x<=4:
+                mystr+=letter[x]
+            elif mylen-x>4:
+                mystr+="#"
+        
+    return mystr
+pass
