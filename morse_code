@@ -1,0 +1,36 @@
+MORSE_CODE = {
+    '.-':'A','-...':'B','-.-.':'C','-..':'D','.':'E','..-.':'F',
+    '--.':'G','....':'H','..':'I','.---':'J','-.-':'K','.-..':'L',
+    '--':'M','-.':'N','---':'O','.--.':'P','--.-':'Q','.-.':'R',
+    '...':'S','-':'T','..-':'U','...-':'V','.--':'W','-..-':'X',
+    '-.--':'Y','--..':'Z'
+}
+
+def decode_morse(morse_code):
+    # ToDo: Accept dots, dashes and spaces, return human-readable message
+    mlist= list()
+    mzz=""
+    split_list=morse_code.split(' ')
+    print(split_list)
+
+    for i in range(len(list(split_list))):
+        if split_list[i]=="":
+            mlist+=" "
+        else:
+            mlist+=MORSE_CODE[split_list[i]]
+    
+    #print(mlist)
+
+    #print(MORSE_CODE["...."])
+    #print(MORSE_CODE["."])
+    #print(MORSE_CODE["-.--"])
+    #print(" ")
+    #print(MORSE_CODE[".---"])
+    #print(MORSE_CODE["..-"])
+    #print(MORSE_CODE["-.."])
+    #print(MORSE_CODE["."])
+
+    return mlist#morse_code.replace('.', MORSE_CODE['.']).replace('-', MORSE_CODE['-']).replace(' ', '')
+
+
+print(decode_morse('.... . -.--   .--- ..- -.. .'))
