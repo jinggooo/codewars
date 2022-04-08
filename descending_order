@@ -1,0 +1,18 @@
+def descending_order(num):
+    # Bust a move right here
+    num=list(num)
+
+    for i in range(len(num)):
+        max_idx = i
+        for j in range(i+1,len(num)):
+            if num[i]<num[j]:
+                max_idx=j
+                temp= num[i]
+                num[i]=num[max_idx]
+                num[max_idx]=temp
+                #print("num={}   max_idx={}  i={} j={}".format(num,max_idx,i,j))
+
+    return num
+
+
+print("{}".format(descending_order("51958154846345925")))
