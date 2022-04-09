@@ -12,6 +12,7 @@ def decode_morse(morse_code):
     mzz=""
     split_list=morse_code.split(' ')
     print(split_list)
+    split_list.remove("")#여기에서 공백을 하나 없애줘서 되기는하는데..
 
     for i in range(len(list(split_list))):
         if split_list[i]=="":
@@ -29,8 +30,10 @@ def decode_morse(morse_code):
     #print(MORSE_CODE["..-"])
     #print(MORSE_CODE["-.."])
     #print(MORSE_CODE["."])
-
-    return mlist#morse_code.replace('.', MORSE_CODE['.']).replace('-', MORSE_CODE['-']).replace(' ', '')
+    result= ""
+    for x in mlist:
+        result+= x
+    return result#morse_code.replace('.', MORSE_CODE['.']).replace('-', MORSE_CODE['-']).replace(' ', '')
 
 
 print(decode_morse('.... . -.--   .--- ..- -.. .'))
