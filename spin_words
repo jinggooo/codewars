@@ -1,0 +1,42 @@
+from re import I
+
+
+def spin_words(sentence):
+    # Your code goes here
+
+    print("sentense:{}".format(sentence))
+
+    ss = list()
+    ss = sentence.split(" ")
+
+    print("ss:{}".format(ss))
+
+    ns = ""
+
+    #for i in ss:
+    #    print(len(i))
+    #    if len(i)<5:
+    #        ns=ns+i
+    #    else:
+    #        i=list(i)
+    #        i.reverse()
+    #        for x in i:
+    #            ns+=x
+    #    ns+=" "
+
+    for x in range(len(ss)):
+        if len(ss[x])<5:
+            ns+=ss[x]
+        else:
+            temp=list(ss[x])
+            temp.reverse()
+            for i in temp:
+                ns+=i
+        if x <len(ss)-1:
+            ns+=" "
+
+
+    return ns
+
+
+print(spin_words("hey fellow warriors"))
