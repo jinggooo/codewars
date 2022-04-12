@@ -1,0 +1,19 @@
+from collections import Counter
+
+def duplicate_count(text):
+    #your code here
+    text=text.lower()
+    text=list(text)
+    no=0
+    ct= Counter(text)
+    print(ct.values())
+
+    for x in ct.values():
+        if x>1:
+            no+=1
+        
+
+    return no
+
+
+print(duplicate_count("aaaaaddd"))
