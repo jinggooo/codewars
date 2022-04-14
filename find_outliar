@@ -1,0 +1,28 @@
+from gettext import find
+
+
+def find_outlier(integers):
+    arr=list()
+    ect=0
+    oct=0
+    #print(type(integers))
+    for x in integers:
+        if x%2==0:
+            arr.append("even")
+            ect+=1
+        else:
+            arr.append("odd")
+            oct+=1
+    if ect == 1:
+        for x in range(len(arr)):
+            if arr[x] == "even":
+                return integers[x]
+    else:
+        for x in range(len(arr)):
+            if arr[x] == "odd":
+                return integers[x]
+
+    
+
+
+print(find_outlier([167, 3, 1719, 19, 160, 11, 13, -21]))
