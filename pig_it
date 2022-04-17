@@ -1,0 +1,28 @@
+def pig_it(text):
+    #your code here
+    my_t=""
+    text=text.split(" ")
+    print(text)
+
+    for x in range(len(list(text))):
+        if text[x].isalnum()==True:
+            temp=list(text[x])
+            t=temp[0]
+            temp.pop(0)
+            temp.append(t)
+            print(temp)
+            for a in temp:
+                my_t+=a
+            my_t+="ay"
+        else:
+            temp=list(text[x])
+            for a in temp:
+                my_t+=a
+        if x < len(text)-1:
+            my_t+=" "
+        
+
+    return my_t
+
+
+print(pig_it("!!!! test the code !!@#$"))
