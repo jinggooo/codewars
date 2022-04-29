@@ -1,0 +1,24 @@
+def to_camel_case(text):
+    my_str=""
+    my_list=list()
+    new_text=list(text)
+
+
+    #while i < len(new_text):
+    #    if new_text[i]==('-'):
+    #        new_text.pop(i)
+    #    continue
+    for i in range (len(text)):
+        if text[i]=='-'or text[i]=='_':
+            my_list.append(i)
+            new_text[i+1]=new_text[i+1].upper()
+    
+    for i in reversed(my_list):
+        new_text.pop(i)
+
+    for i in new_text:
+        my_str+=i
+    return my_str
+
+
+print(to_camel_case("the_stealth_warrior"))
